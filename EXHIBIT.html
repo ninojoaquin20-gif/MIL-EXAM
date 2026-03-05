@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trash to Art — JRU</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="exhibit.css" />
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- Floating particles background -->
+  <div class="particles" id="particles"></div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-text">RECYCLE</div>
+    <div class="hero-content">
+      <div class="tag-line">Jose Rizal University × Sustainability</div>
+      <h1 class="hero-title">
+        <span class="word" data-word="TRASH TO">TRASH TO</span>
+        <span class="arrow-divider">
+          <svg viewBox="0 0 80 30" fill="none">
+            <path d="M0 15 Q40 0 80 15 Q40 30 0 15Z" fill="var(--accent)"/>
+            <path d="M55 5 L75 15 L55 25" stroke="var(--bg)" stroke-width="3" fill="none" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="word word-art" data-word="ART">ART</span>
+      </h1>
+      <p class="hero-sub">An interactive infographic on JRU's environmental initiative transforming waste into wonder.</p>
+      <div class="hero-cta" id="heroCta">
+        <span>Scroll to explore</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </div>
+    <div class="hero-visual" id="heroVisual">
+      <div class="spinning-ring ring1"></div>
+      <div class="spinning-ring ring2"></div>
+      <div class="spinning-ring ring3"></div>
+      <div class="center-icon">♻</div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about-section" id="about">
+    <div class="section-label">01 — ABOUT</div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <h2 class="section-title">What is <em>Trash to Art?</em></h2>
+        <p>Trash to Art is an environmental support activity at <strong>Jose Rizal University (JRU)</strong> in Manila, Philippines. It initiates students creativity into building artworks, sculptures, and installations using discarded and recyclable materials.</p>
+        <p>More than just a campus project, it reflects JRU's commitment to ecological literacy, community awareness, and the power of art as a vehicle for social change.</p>
+      </div>
+      <div class="about-cards reveal">
+        <div class="stat-card" data-count="30" data-suffix="+" data-label="Students Participated">
+          <span class="stat-number">0</span>
+          <span class="stat-suffix">+</span>
+          <span class="stat-label">Students Participated</span>
+        </div>
+        <div class="stat-card" data-count="10" data-suffix="kg" data-label="Waste Diverted">
+          <span class="stat-number">0</span>
+          <span class="stat-suffix">kg</span>
+          <span class="stat-label">Waste Diverted</span>
+        </div>
+        <div class="stat-card" data-count="20" data-suffix="+" data-label="Artworks Created">
+          <span class="stat-number">0</span>
+          <span class="stat-suffix">+</span>
+          <span class="stat-label">Artworks Created</span>
+        </div>
+        <div class="stat-card" data-count="200" data-suffix="+" data-label="Departments Involved">
+          <span class="stat-number">0</span>
+          <span class="stat-suffix">+</span>
+          <span class="stat-label">Students Inspired</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TIMELINE ===== -->
+  <section class="section timeline-section" id="timeline">
+    <div class="section-label">02 — JOURNEY</div>
+    <h2 class="section-title reveal">The Creative <em>Process</em></h2>
+    <div class="timeline" id="timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-item reveal game-trigger" data-step="1" data-modal="modal-toss">
+        <div class="timeline-icon">🗑️</div>
+        <div class="timeline-content">
+          <h3>Collection Drive <span class="play-badge">▶ Play</span></h3>
+          <p>Students gather discarded materials — plastic bottles, tin cans, old newspapers, broken electronics, fabric scraps — from homes, campuses, and local communities.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal game-trigger" data-step="2" data-modal="modal-sort">
+        <div class="timeline-icon">🧪</div>
+        <div class="timeline-content">
+          <h3>Sorting & Processing <span class="play-badge">▶ Play</span></h3>
+          <p>Materials are cleaned, categorized, and assessed for structural and aesthetic potential. Workshops guide students in safe handling and creative possibilities.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal game-trigger" data-step="3" data-modal="modal-draw">
+        <div class="timeline-icon">✏️</div>
+        <div class="timeline-content">
+          <h3>Concept & Design <span class="play-badge">▶ Play</span></h3>
+          <p>Teams brainstorm and sketch concepts. Faculty mentors from Fine Arts, Architecture, and Engineering collaborate to guide technical feasibility and artistic vision.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal game-trigger" data-step="4" data-modal="modal-robot">
+        <div class="timeline-icon">🎨</div>
+        <div class="timeline-content">
+          <h3>Creation & Assembly <span class="play-badge">▶ Play</span></h3>
+          <p>The transformation begins. Students build sculptures, murals, functional art, and installations using only reclaimed materials — no virgin resources allowed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MATERIALS ===== -->
+  <section class="section materials-section" id="materials">
+    <div class="section-label">03 — MATERIALS</div>
+    <h2 class="section-title reveal">From <em>Waste</em> to Wonder</h2>
+    <p class="materials-intro reveal">Click any material to explore how it transforms into art.</p>
+    <div class="materials-grid" id="materialsGrid">
+      <div class="material-card" data-material="plastic">
+        <div class="material-icon">🧴</div>
+        <div class="material-before">Plastic Bottles</div>
+        <div class="material-arrow">→</div>
+        <div class="material-after">Mosaic Sculptures</div>
+        <div class="material-detail">
+          <p>Plastic bottles are cut, flattened, and layered to create shimmering mosaic panels that mimic stained glass. When lit from behind, they produce a kaleidoscopic glow.</p>
+          <div class="material-bar"><div class="bar-fill" style="--w:85%"></div><span>85% of artworks use plastic</span></div>
+        </div>
+      </div>
+      <div class="material-card" data-material="paper">
+        <div class="material-icon">📰</div>
+        <div class="material-before">Newspapers & Cardboard</div>
+        <div class="material-arrow">→</div>
+        <div class="material-after">Papier-Mâché Figures</div>
+        <div class="material-detail">
+          <p>Old newspapers are pulped and molded into life-size figurines representing communities affected by waste pollution, creating powerful human-scale statements.</p>
+          <div class="material-bar"><div class="bar-fill" style="--w:70%"></div><span>70% of artworks use paper</span></div>
+        </div>
+      </div>
+      <div class="material-card" data-material="metal">
+        <div class="material-icon">🥫</div>
+        <div class="material-before">Tin Cans & Scrap Metal</div>
+        <div class="material-arrow">→</div>
+        <div class="material-after">Kinetic Wind Art</div>
+        <div class="material-detail">
+          <p>Tin cans are shaped into spinning turbine blades and mounted on armatures. Wind-powered kinetic installations move in real time, symbolizing energy renewal.</p>
+          <div class="material-bar"><div class="bar-fill" style="--w:55%"></div><span>55% of artworks use metal</span></div>
+        </div>
+      </div>
+      <div class="material-card" data-material="fabric">
+        <div class="material-icon">👕</div>
+        <div class="material-before">Old Clothing & Textiles</div>
+        <div class="material-arrow">→</div>
+        <div class="material-after">Textile Installations</div>
+        <div class="material-detail">
+          <p>Discarded garments are woven into large-scale tapestries hung across campus corridors, each piece tagged with the story of its origin — a visual census of consumption.</p>
+          <div class="material-bar"><div class="bar-fill" style="--w:40%"></div><span>40% of artworks use fabric</span></div>
+        </div>
+      </div>
+      <div class="material-card" data-material="electronics">
+        <div class="material-icon">💾</div>
+        <div class="material-before">E-Waste & Electronics</div>
+        <div class="material-arrow">→</div>
+        <div class="material-after">Circuit Board Portraits</div>
+        <div class="material-detail">
+          <p>Circuit boards, wires, and broken screens become intricate portrait collages — faces of environmental activists assembled entirely from the technology they warned us about.</p>
+          <div class="material-bar"><div class="bar-fill" style="--w:30%"></div><span>30% of artworks use e-waste</span></div>
+        </div>
+      </div>
+      <div class="material-card" data-material="glass">
+        <div class="material-icon">🍶</div>
+        <div class="material-before">Glass Bottles & Jars</div>
+        <div class="material-arrow">→</div>
+        <div class="material-after">Light Installations</div>
+        <div class="material-detail">
+          <p>Colored glass bottles are arranged into chandelier-like hanging structures. Solar-powered LEDs inserted inside create ambient lighting displays for campus events.</p>
+          <div class="material-bar"><div class="bar-fill" style="--w:25%"></div><span>25% of artworks use glass</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== IMPACT ===== -->
+  <section class="section impact-section" id="impact">
+    <div class="section-label">04 — IMPACT</div>
+    <h2 class="section-title reveal">Why It <em>Matters</em></h2>
+    <div class="impact-columns">
+      <div class="impact-pillar reveal" data-delay="0">
+        <div class="pillar-icon">🌍</div>
+        <h3>Environmental</h3>
+        <p>Every kilogram of material used in Trash to Art is waste that doesn't end up in our oceans and rivers. The project directly reduces the campus's contribution to Metro Manila's 9,000-ton daily waste output.</p>
+      </div>
+      <div class="impact-pillar reveal" data-delay="1">
+        <div class="pillar-icon">📚</div>
+        <h3>Educational</h3>
+        <p>Students develop hands-on understanding of material science, waste cycles, and design thinking. The activity bridges classroom learning with real-world ecological responsibility.</p>
+      </div>
+      <div class="impact-pillar reveal" data-delay="2">
+        <div class="pillar-icon">🤝</div>
+        <h3>Social</h3>
+        <p>The exhibition is open to all strands of senior high school division at Jose Rizal University. This creates brand new social circles for interaction and collaboration.</p>
+      </div>
+      <div class="impact-pillar reveal" data-delay="3">
+        <div class="pillar-icon">🎭</div>
+        <h3>Cultural</h3>
+        <p>By treating waste as medium, the project challenges dominant narratives around consumption and value — art becoming the most powerful argument for sustainability.</p>
+      </div>
+    </div>
+    <!-- Animated waste-to-art meter -->
+    <div class="impact-meter reveal">
+      <div class="meter-label">Campus Waste Diverted Through Art</div>
+      <div class="meter-track">
+        <div class="meter-fill" id="meterFill"></div>
+        <div class="meter-glow"></div>
+      </div>
+      <div class="meter-annotations">
+        <span>0kg</span>
+        <span>2kg</span>
+        <span>5kg</span>
+        <span>7kg</span>
+        <span>10kg ✓</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY TEASER ===== -->
+  <section class="gallery-section-wrap" id="gallery">
+    <div class="library-room">
+      <!-- Library wall details -->
+      <div class="lib-shelf lib-shelf-top"></div>
+      <div class="lib-shelf lib-shelf-bottom"></div>
+      <div class="lib-light lib-light-1"></div>
+      <div class="lib-light lib-light-2"></div>
+      <div class="lib-light lib-light-3"></div>
+      <div class="section-label" style="position:relative;z-index:3;padding: 60px 6vw 0;">05 — FEATURED WORKS</div>
+      <h2 class="section-title reveal" style="position:relative;z-index:3;padding: 0 6vw 40px;">Student <em>Creations</em></h2>
+
+      <div class="frames-grid" id="framesGrid">
+
+        <div class="frame-wrap reveal" data-delay="0">
+          <div class="frame-mount">
+            <div class="wood-frame">
+              <canvas class="artwork-canvas" id="art1" width="420" height="280"></canvas>
+            </div>
+            <div class="frame-nameplate">Archipelago Rising</div>
+          </div>
+          <div class="artwork-info">
+            <span class="aw-title">Archipelago Rising</span>
+            <span class="aw-mat">Plastic bottles · Fishing nets</span>
+            <span class="aw-desc">A shimmering mosaic of reclaimed PET bottles depicts the Philippine archipelago rising from plastic-choked seas — a call to protect what we stand on.</span>
+          </div>
+        </div>
+
+        <div class="frame-wrap reveal" data-delay="1">
+          <div class="frame-mount">
+            <div class="wood-frame wood-frame-tall">
+              <canvas class="artwork-canvas" id="art2" width="280" height="420"></canvas>
+            </div>
+            <div class="frame-nameplate">The Last Tree</div>
+          </div>
+          <div class="artwork-info">
+            <span class="aw-title">The Last Tree</span>
+            <span class="aw-mat">Cardboard · Wire · Paper pulp</span>
+            <span class="aw-desc">Sculpted entirely from cardboard and wire, this lone tree stands in a wasteland of its own material — a quiet portrait of deforestation and resilience.</span>
+          </div>
+        </div>
+
+        <div class="frame-wrap reveal" data-delay="2">
+          <div class="frame-mount">
+            <div class="wood-frame">
+              <canvas class="artwork-canvas" id="art3" width="280" height="280"></canvas>
+            </div>
+            <div class="frame-nameplate">Circuit of Life</div>
+          </div>
+          <div class="artwork-info">
+            <span class="aw-title">Circuit of Life</span>
+            <span class="aw-mat">E-waste · Circuit boards</span>
+            <span class="aw-desc">A human face emerges from layers of circuit boards and salvaged wires — the face of every person touched by electronic waste pollution.</span>
+          </div>
+        </div>
+
+        <div class="frame-wrap reveal" data-delay="3">
+          <div class="frame-mount">
+            <div class="wood-frame">
+              <canvas class="artwork-canvas" id="art4" width="280" height="280"></canvas>
+            </div>
+            <div class="frame-nameplate">Wind Harvest</div>
+          </div>
+          <div class="artwork-info">
+            <span class="aw-title">Wind Harvest</span>
+            <span class="aw-mat">Tin cans · Scrap metal</span>
+            <span class="aw-desc">Tin-can turbines painted against a burning sky — kinetic sculpture frozen in time, symbolising the clean energy future we must build from today's waste.</span>
+          </div>
+        </div>
+
+        <div class="frame-wrap frame-wrap-wide reveal" data-delay="4">
+          <div class="frame-mount">
+            <div class="wood-frame wood-frame-wide">
+              <canvas class="artwork-canvas" id="art5" width="580" height="260"></canvas>
+            </div>
+            <div class="frame-nameplate">Woven Histories</div>
+          </div>
+          <div class="artwork-info">
+            <span class="aw-title">Woven Histories</span>
+            <span class="aw-mat">Old textiles · Denim · Cotton</span>
+            <span class="aw-desc">Strips of discarded garments are woven into a sweeping tapestry — every thread a story, every colour a life, every stitch a choice to remember.</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo">JRU × TRASH TO ART</div>
+      <div class="footer-note">Jose Rizal University · Mandaluyong City, Philippines</div>
+      <div class="footer-recycled">♻ This infographic was built with 100% creative energy</div>
+    </div>
+  </footer>
+
+  <!-- ===== GAME MODALS ===== -->
+
+  <!-- GAME 1: Paper Toss -->
+  <div class="game-modal" id="modal-toss">
+    <div class="game-panel">
+      <div class="game-panel-header">
+        <div class="game-panel-title">🗑️ Paper Toss</div>
+        <div class="game-panel-sub">Drag the paper ball and release to toss it into the trash can!</div>
+        <button class="modal-close-btn" data-close="modal-toss">✕</button>
+      </div>
+      <div class="game-content" id="toss-content">
+        <canvas id="tossCanvas" width="660" height="380"></canvas>
+        <div class="game-hud">
+          <div class="hud-item">Score <span class="hud-val" id="tossScore">0</span></div>
+          <div class="hud-item">Throws <span class="hud-val" id="tossThrows">0</span></div>
+          <div class="hud-item">Streak 🔥 <span class="hud-val" id="tossStreak">0</span></div>
+          <button class="game-btn" id="tossReset">↺ New Game</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAME 2: Sorting -->
+  <div class="game-modal" id="modal-sort">
+    <div class="game-panel">
+      <div class="game-panel-header">
+        <div class="game-panel-title">♻️ Sorting Challenge</div>
+        <div class="game-panel-sub">Sort each item into the correct bin — Recyclable or Trash!</div>
+        <button class="modal-close-btn" data-close="modal-sort">✕</button>
+      </div>
+      <div class="game-content" id="sort-content">
+        <div class="sort-progress-bar"><div class="sort-progress-fill" id="sortProgressFill"></div></div>
+        <div class="sort-arena">
+          <div class="sort-bin left-bin" id="sortLeftBin">
+            <div class="bin-label">♻️<br>Recyclable</div>
+          </div>
+          <div class="sort-center" id="sortCenter">
+            <div class="sort-item-card" id="sortItemCard">
+              <div class="sort-item-emoji" id="sortItemEmoji"></div>
+              <div class="sort-item-name" id="sortItemName"></div>
+            </div>
+            <div class="sort-feedback" id="sortFeedback"></div>
+          </div>
+          <div class="sort-bin right-bin" id="sortRightBin">
+            <div class="bin-label">🗑️<br>Trash</div>
+          </div>
+        </div>
+        <div class="sort-buttons">
+          <button class="sort-btn recycle-btn" id="sortRecycleBtn">♻️ Recyclable</button>
+          <button class="sort-btn trash-btn" id="sortTrashBtn">🗑️ Trash</button>
+        </div>
+        <div class="game-hud">
+          <div class="hud-item">Score <span class="hud-val" id="sortScore">0</span></div>
+          <div class="hud-item">Items <span class="hud-val" id="sortCount">0/12</span></div>
+          <button class="game-btn" id="sortReset">↺ New Game</button>
+        </div>
+        <div class="sort-endscreen" id="sortEndscreen">
+          <div class="end-title">Round Complete! 🎉</div>
+          <div class="end-score" id="endScore"></div>
+          <button class="game-btn" id="sortPlayAgain">Play Again</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAME 3: Drawing -->
+  <div class="game-modal" id="modal-draw">
+    <div class="game-panel game-panel-wide">
+      <div class="game-panel-header">
+        <div class="game-panel-title">✏️ Design Studio</div>
+        <div class="game-panel-sub">Sketch your artwork concept on the canvas below!</div>
+        <button class="modal-close-btn" data-close="modal-draw">✕</button>
+      </div>
+      <div class="game-content draw-content">
+        <div class="draw-toolbar">
+          <div class="tool-group">
+            <span class="tool-label">Colors</span>
+            <div class="color-palette" id="colorPalette">
+              <div class="color-swatch active" style="background:#c8f03c" data-color="#c8f03c"></div>
+              <div class="color-swatch" style="background:#f0a500" data-color="#f0a500"></div>
+              <div class="color-swatch" style="background:#ff5733" data-color="#ff5733"></div>
+              <div class="color-swatch" style="background:#4ecdc4" data-color="#4ecdc4"></div>
+              <div class="color-swatch" style="background:#ffffff" data-color="#ffffff"></div>
+              <div class="color-swatch" style="background:#ff94c8" data-color="#ff94c8"></div>
+              <div class="color-swatch" style="background:#7b61ff" data-color="#7b61ff"></div>
+              <div class="color-swatch" style="background:#00cfff" data-color="#00cfff"></div>
+              <div class="color-swatch" style="background:#ff6b35" data-color="#ff6b35"></div>
+              <div class="color-swatch" style="background:#a8e063" data-color="#a8e063"></div>
+              <div class="color-swatch" style="background:#f7d794" data-color="#f7d794"></div>
+              <div class="color-swatch" style="background:#778ca3" data-color="#778ca3"></div>
+            </div>
+          </div>
+          <div class="tool-group">
+            <span class="tool-label">Size</span>
+            <div class="brush-sizes" id="brushSizes">
+              <button class="brush-btn active" data-size="4">S</button>
+              <button class="brush-btn" data-size="12">M</button>
+              <button class="brush-btn" data-size="28">L</button>
+            </div>
+          </div>
+          <div class="tool-group">
+            <span class="tool-label">Tools</span>
+            <div class="draw-tools">
+              <button class="tool-btn active" id="penTool" title="Pen">✏️</button>
+              <button class="tool-btn" id="eraserTool" title="Eraser">⬜</button>
+              <button class="tool-btn" id="fillTool" title="Fill">🪣</button>
+            </div>
+          </div>
+          <button class="game-btn danger-btn" id="clearCanvas">🗑️ Clear</button>
+        </div>
+        <canvas id="drawCanvas"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAME 4: Robot Builder -->
+  <div class="game-modal" id="modal-robot">
+    <div class="game-panel game-panel-wide">
+      <div class="game-panel-header">
+        <div class="game-panel-title">🤖 Robot Assembly</div>
+        <div class="game-panel-sub">Pick recycled parts to build your robot, then bring it to life!</div>
+        <button class="modal-close-btn" data-close="modal-robot">✕</button>
+      </div>
+      <div class="game-content robot-content">
+        <div class="robot-parts-panel">
+          <div class="parts-category" data-cat="head">
+            <div class="cat-label">🔩 Head</div>
+            <div class="parts-options">
+              <button class="part-btn" data-cat="head" data-part="can" data-emoji="🥫">Tin Can</button>
+              <button class="part-btn" data-cat="head" data-part="box" data-emoji="📦">Box Head</button>
+              <button class="part-btn" data-cat="head" data-part="bottle" data-emoji="🍶">Bottle</button>
+            </div>
+          </div>
+          <div class="parts-category" data-cat="body">
+            <div class="cat-label">📦 Body</div>
+            <div class="parts-options">
+              <button class="part-btn" data-cat="body" data-part="crate" data-emoji="🧺">Plastic Crate</button>
+              <button class="part-btn" data-cat="body" data-part="carton" data-emoji="🗃️">Big Carton</button>
+              <button class="part-btn" data-cat="body" data-part="barrel" data-emoji="🛢️">Oil Drum</button>
+            </div>
+          </div>
+          <div class="parts-category" data-cat="arms">
+            <div class="cat-label">🦾 Arms</div>
+            <div class="parts-options">
+              <button class="part-btn" data-cat="arms" data-part="tubes" data-emoji="🧪">PVC Tubes</button>
+              <button class="part-btn" data-cat="arms" data-part="wires" data-emoji="🔌">Wires</button>
+              <button class="part-btn" data-cat="arms" data-part="bottles" data-emoji="🍾">Bottles</button>
+            </div>
+          </div>
+          <div class="parts-category" data-cat="legs">
+            <div class="cat-label">🦵 Legs</div>
+            <div class="parts-options">
+              <button class="part-btn" data-cat="legs" data-part="cans" data-emoji="🥤">Tin Cans</button>
+              <button class="part-btn" data-cat="legs" data-part="pipes" data-emoji="🔧">Steel Pipes</button>
+              <button class="part-btn" data-cat="legs" data-part="cardboard" data-emoji="📜">Cardboard Rolls</button>
+            </div>
+          </div>
+          <button class="game-btn" id="robotReset">↺ Reset</button>
+        </div>
+        <div class="robot-display-panel">
+          <canvas id="robotCanvas" width="320" height="420"></canvas>
+          <div class="robot-emotions" id="robotEmotions">
+            <button class="emo-btn" data-emotion="idle">😐 Idle</button>
+            <button class="emo-btn" data-emotion="happy">😄 Happy</button>
+            <button class="emo-btn" data-emotion="dance">🕺 Dance</button>
+            <button class="emo-btn" data-emotion="sad">😢 Sad</button>
+          </div>
+          <div class="robot-speech" id="robotSpeech"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="exhibit.js"></script>
+</body>
+</html>
